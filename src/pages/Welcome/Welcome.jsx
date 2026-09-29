@@ -45,26 +45,26 @@ export default function Welcome() {
     <div className="min-h-screen aurora-bg flex flex-col font-sans overflow-hidden">
       {/* Sticky Header - Glassmorphic */}
       <header className="p-4 fixed top-0 w-full z-50">
-        <nav className="container mx-auto max-w-6xl glass-panel rounded-full px-6 py-3 flex justify-between items-center shadow-lg">
+        <nav className="container mx-auto max-w-6xl glass-panel rounded-full px-4 sm:px-6 py-2 sm:py-3 flex justify-between items-center shadow-lg">
           <Link to="/" className="hover:scale-105 transition-transform drop-shadow-md">
             {/* The Logo itself needs to be visible on dark/vibrant backgrounds. The existing logo might be dark, but let's wrap it nicely */}
-            <div className="bg-white/80 dark:bg-slate-900/80 px-3 py-1.5 rounded-xl backdrop-blur-md">
-              <LangLearnLogo size="medium" />
+            <div className="bg-white/80 dark:bg-slate-900/80 px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl backdrop-blur-md">
+              <LangLearnLogo size="small" />
             </div>
           </Link>
-          <div className="flex items-center gap-3">
-            <Link to="/login">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link to="/login" className="hidden md:block">
               <button className="btn-gamified px-4 py-2 bg-slate-800/10 dark:bg-white/10 text-slate-800 dark:text-white border-0 hover:bg-slate-800/20 dark:hover:bg-white/20 transition-all font-bold">
                 Admin Login
               </button>
             </Link>
-            <Link to="/login">
+            <Link to="/login" className="hidden sm:block">
               <button className="btn-gamified secondary">
                 Log in
               </button>
             </Link>
             <Link to="/signup">
-              <button className="btn-gamified">
+              <button className="btn-gamified px-4 py-2 text-sm sm:text-base whitespace-nowrap">
                 Get Started
               </button>
             </Link>

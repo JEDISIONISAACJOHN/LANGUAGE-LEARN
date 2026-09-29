@@ -106,15 +106,15 @@ export default function AppSidebar() {
       {/* ======================================================== */}
       {/* 2. MOBILE FIXED BOTTOM NAVIGATION BAR (Height 64px)       */}
       {/* ======================================================== */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white dark:bg-slate-900 border-t-2 border-slate-100 dark:border-slate-800 flex items-center justify-around px-2 z-40 shadow-lg">
-        {navItems.slice(0, 5).map((item, idx) => {
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white dark:bg-slate-900 border-t-2 border-slate-100 dark:border-slate-800 flex items-center overflow-x-auto scrollbar-hide px-2 z-40 shadow-lg space-x-4">
+        {navItems.map((item, idx) => {
           const Icon = item.icon
           if (item.action === 'alphabet') {
             return (
               <button
                 key={idx}
                 onClick={() => setShowAlphabetModal(true)}
-                className="flex flex-col items-center justify-center p-1 text-slate-500 dark:text-slate-400"
+                className="flex-shrink-0 flex flex-col items-center justify-center p-1 text-slate-500 dark:text-slate-400 min-w-[60px]"
               >
                 <Icon size={22} />
                 <span className="text-[10px] font-bold mt-0.5">Letters</span>
@@ -127,7 +127,7 @@ export default function AppSidebar() {
             <NavLink
               key={idx}
               to={item.to}
-              className={`flex flex-col items-center justify-center p-1 transition-colors ${
+              className={`flex-shrink-0 flex flex-col items-center justify-center p-1 transition-colors min-w-[60px] ${
                 isActive ? 'text-indigo-600 dark:text-indigo-400 font-black' : 'text-slate-500 dark:text-slate-400 font-semibold'
               }`}
             >
