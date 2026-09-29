@@ -18,11 +18,7 @@ export default function AppLayout({ children }) {
         Main Content Area 
         Top margin matches navbar height + padding on desktop. Small padding on mobile.
       */}
-<<<<<<< HEAD:src/components/AppLayout/AppLayout.jsx
       <main className="flex-1 w-full pt-6 md:pt-28 pb-20 md:pb-8 min-h-[100dvh]">
-=======
-      <main className="flex-1 w-full pt-6 md:pt-28 pb-20 md:pb-8 min-h-screen">
->>>>>>> 4c3ee30 (Fix mobile responsiveness, add PWA plugin, and add logo):LANGLEARN/src/components/AppLayout/AppLayout.jsx
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6">
           {children}
         </div>
